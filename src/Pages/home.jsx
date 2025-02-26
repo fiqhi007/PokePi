@@ -1,12 +1,13 @@
 import React from "react";
-import Display from "../component/Layout/Display";
+
 import Navbar from "../component/Fragment/Navbar";
+import LayoutHome from "../component/Layout/LayoutHome";
 
 const Home = () => {
   return (
     <>
       <Navbar />
-      <Display />
+      <LayoutHome />
     </>
   );
 };

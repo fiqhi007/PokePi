@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../Fragment/Navbar"; // Sesuaikan path-nya
 import PokemonCard from "../Fragment/PokemonCard";
 import Pagination from "../Fragment/Pagination"; // Sesuaikan path-nya
-import SortControls from "../Fragment/SortControls"; // Sesuaikan path-nya
+import SortControls from "../Fragment/SortControlHome"; // Sesuaikan path-nya
 
-const Display = () => {
+const LayoutHome = () => {
   const [allPokemonList, setAllPokemonList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 20;
@@ -91,4 +91,4 @@ const Display = () => {
   );
 };
 
-export default Display;
+export default LayoutHome;

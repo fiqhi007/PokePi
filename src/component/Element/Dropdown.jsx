@@ -1,25 +1,22 @@
 import React from "react";
 
-const Dropdown = () => {
+const Dropdown = ({ label, items, onItemClick }) => {
   return (
-    <>
-      <div className="dropdown dropdown-bottom">
-        <div tabIndex={0} role="button" className="btn m-1">
-          Click ⬇️
-        </div>
-        <ul
-          tabIndex={0}
-          className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
-        >
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <a>Item 2</a>
-          </li>
-        </ul>
+    <div className="dropdown dropdown-bottom mb-2">
+      <div tabIndex={0} role="button" className="btn m-1">
+        {label} ⬇️
       </div>
-    </>
+      <ul
+        tabIndex={0}
+        className="dropdown-content menu bg-base-100 rounded-box z-10 w-52 p-2 shadow"
+      >
+        {items.map((item, index) => (
+          <li key={index}>
+            <a onClick={() => onItemClick(item.value)}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 };
 
